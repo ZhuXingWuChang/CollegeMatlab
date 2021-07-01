@@ -1,0 +1,14 @@
+clear
+fix(3.5)
+floor(3.5)
+fix(3.4)
+floor(3.4)
+fix(3.2)
+floor(3.2)
+fix(-3.2)
+floor(-3.2)
+fix(-3.2)
+ceil(-3.2)
+%fix是对小数位截断
+%floor是向下取整
+%ceil是向上取整
