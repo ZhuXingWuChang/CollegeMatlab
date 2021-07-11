@@ -7,10 +7,10 @@ else
     fprintf(fid, '%d %d %d %d %d\n', randmat');
     
     closeresult = fclose(fid);
-    if ~closeresult
-        disp('File close successful')
-    else
+    if closeresult == -1
         disp('File close not successful')
+    else
+        disp('File close successful')
     end
 end
 
