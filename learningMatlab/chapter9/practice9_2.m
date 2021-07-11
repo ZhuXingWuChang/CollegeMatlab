@@ -8,9 +8,9 @@ else
     fprintf('每行的和为%.2f\n', s)
     
     closeresult = fclose(fid);
-    if ~closeresult
-        disp('文件关闭成功')
-    else
+    if closeresult == -1
         disp('文件关闭失败')
+    else
+        disp('文件关闭成功')
     end
 end
