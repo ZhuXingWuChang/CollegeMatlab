@@ -6,13 +6,14 @@ else
     while feof(fid) == 0
         aline = fgetl(fid);
         [num,charcode] = strtok(aline);
-        fprintf('%.2f %s\n', str2num(num), charcode)
+        charcode = strtrim(charcode);
+        fprintf('%.2f %c\n', str2num(num), charcode)
     end
     
     closeresult = fclose(fid);
-    if closeresult == 0
-        disp('File close successful')
-    else
+    if closeresult == -1
         disp('File close not successful')
+    else
+        disp('File close successful')
     end
 end
